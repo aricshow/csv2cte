@@ -78,9 +78,9 @@ Result (excerpt):
 WITH my_data AS (
   SELECT *
   FROM (VALUES
-    ('1', 1234.56, 'Nice home', true),
+    ('1', 1234.56, 'Oak Hutch', true),
     ('2', NULL, NULL, NULL),
-    ('3', 9870.00, 'Another house', false)
+    ('3', 9870.00, 'Steamboat', false)
   ) AS d(
     order_id,
     price,
@@ -91,7 +91,7 @@ WITH my_data AS (
 SELECT * FROM my_data;
 ```
 
-*Why it matters*: The override forces `is_active` to be a proper PostgreSQL `boolean`, so the generated SQL no longer quotes `"true"` / `"false"`. Additionally, in this scenario, we are wanting to import the id as a varchar. (God forbid you ever encounter such a design, but we've all seen it.)
+*Why it matters*: The override forces `is_paid` to be a proper PostgreSQL `boolean`, so the generated SQL no longer quotes `"true"` / `"false"`. Additionally, in this scenario, we are wanting to import the `order_id` as a `varchar`. (God forbid you ever encounter such a design, but we've all seen it.)
 
 ### Writing output to a file
 
