@@ -28,7 +28,7 @@ You can also install from source
 pip install .
 
 # Or directly from GitHub (replace <URL>):
-pip install git+https://github.com/yourname/csv2cte.git
+pip install git+https://github.com/aricshow/csv2cte.git
 ```
 After installation a console script called **`csv2cte`** is available on your `PATH`.
 
@@ -68,7 +68,7 @@ SELECT * FROM cte_data;
 
 ```bash
 $ csv2cte -f sample.csv \
-    --coltypes '{"is_":"boolean", "order_id":"varchar"}' \
+    --coltypes '{"is_paid":"boolean", "order_id":"varchar"}' \
     -n my_data -a d
 ```
 
