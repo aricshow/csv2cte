@@ -36,7 +36,7 @@ After installation a console script called **`csv2cte`** is available on your `P
 
 ## 🚀 Quick start
 
-### 1️⃣ Auto‑detecting column types
+### Auto‑detecting column types
 
 ```bash
 $ cat sample.csv
